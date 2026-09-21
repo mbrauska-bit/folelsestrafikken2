@@ -1,2 +1,1 @@
-console.console.log(gayporn);
-
+console.log(gayporn);
