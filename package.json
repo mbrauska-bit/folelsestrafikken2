@@ -1,0 +1,14 @@
+{
+  "name": "følelsesrafikken",
+  "version": "1.0.0",
+  "description": "Enkel trafikklys-app for skolehverdag",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongodb": "^7.6.0"
+  }
+}
