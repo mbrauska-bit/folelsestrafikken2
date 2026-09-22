@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	background: #dfe7e5 url("/img/background.png") center / cover fixed no-repeat;
+	color: #243537;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+main {
+	min-height: calc(100vh - 72px);
+	display: grid;
+	place-content: center;
+	justify-items: center;
+	gap: 1rem;
+	padding: 3rem 1.5rem;
+	text-align: center;
+	background: rgba(255, 252, 245, 0.42);
+}
+
+h1 {
+	margin: 0;
+	font-size: clamp(2.5rem, 8vw, 5.5rem);
+	letter-spacing: 0.02em;
+}
+
+p {
+	margin: 0;
+	font-size: 1.25rem;
+}
+
+a {
+	color: #243537;
+	font-weight: 700;
+}
