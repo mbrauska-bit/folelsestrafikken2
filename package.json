@@ -1,7 +1,7 @@
 {
   "name": "følelsesrafikken",
   "version": "1.0.0",
-  "description": "Enkel trafikklys-app for skolehverdag",
+  "description": "mark ville ha dette idk why",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
