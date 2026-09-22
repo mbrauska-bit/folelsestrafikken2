@@ -1,10 +1,6 @@
-const express = require('express');
-const path = require('path');
-const { MongoClient } = require('mongodb');
-
-const app = express();
-const port = 3000;
-const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017';
-const client = new MongoClient(mongoUri);
-let db = null;
-
+const express = require("express"); //importert express server
+const argon2 = require("argon2");
+const mongoose = require("mongoose"); 
+const Coffee = require("./models/coffee");
+const mongodb = mongoose.connect("mongodb://localhost:27017/coffee");
+const app = express()
