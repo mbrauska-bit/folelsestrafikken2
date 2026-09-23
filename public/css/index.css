@@ -39,4 +39,35 @@ p {
 a {
 	color: #243537;
 	font-weight: 700;
+	border: none;
+}
+.trafikk{
+display:flex;
+border: none;
+flex-direction:column;
+gap:10px;
+max-width: 400px;
+margin:30px auto;
+}
+.trafikk button{
+padding:20px;
+font-size:20px;
+
+border-radius: 5px;
+cursor:pointer;
+border:none;
+}
+
+
+.green{
+	background-color:#70A151
+}
+.yellow{
+	background-color:#D7CA56
+}
+.red{
+	background-color:#7D0C0C
+}
+.trafikk button:hover{
+	transform:scale(1.03)
 }
