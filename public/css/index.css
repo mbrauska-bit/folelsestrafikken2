@@ -1,208 +1,166 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-	min-height: 100%;
+    min-height: 100%;
 }
 
 body {
-	margin: 0;
-	background: #dfe7e5 url("/img/background.png") center / cover fixed no-repeat;
-	color: #243537;
-	font-family: Georgia, "Times New Roman", serif;
+    margin: 0;
+    background: #dfe7e5 url("/img/background.png") center / cover fixed no-repeat;
+    color: #243537;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
+
+/* Main */
+
 main {
-	min-height: calc(100vh - 72px);
-	display: grid;
-	place-content: center;
-	justify-items: center;
-	gap: 1rem;
-	padding: 3rem 1.5rem;
-	text-align: center;
-	background: rgba(255, 252, 245, 0.42);
+    min-height: calc(100vh - 72px);
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 1rem;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: rgba(255, 252, 245, 0.42);
 }
 
 h1 {
-	margin: 0;
-	font-size: clamp(2.5rem, 8vw, 5.5rem);
-	letter-spacing: 0.02em;
+    margin: 0;
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
 }
 
 p {
-	margin: 0;
-	font-size: 1.25rem;
+    margin: 0;
+    font-size: 1.25rem;
 }
 
-a {
-	color: #243537;
-	font-weight: 700;
-	border: none;
-}
-/* ===== TRAFFIC LIGHT BUTTONS ===== */
+
+/* Traffic buttons */
 
 .trafikk {
     display: flex;
     flex-direction: column;
-
     gap: 10px;
-
     max-width: 400px;
-
     margin: 30px auto;
 }
 
-
-/* Design for all three buttons */
-
 .trafikk button {
     padding: 20px;
-
     font-size: 20px;
     font-family: Georgia, "Times New Roman", serif;
-
     border: none;
     border-radius: 5px;
-
     cursor: pointer;
-
-    transition:
-        opacity 0.4s ease,
-        transform 0.4s ease;
 }
-
-
-/* Green button */
 
 .green {
     background-color: #70A151;
     color: white;
 }
 
-
-/* Yellow button */
-
 .yellow {
     background-color: #D7CA56;
     color: #243537;
 }
-
-
-/* Red button */
 
 .red {
     background-color: #7D0C0C;
     color: white;
 }
 
-
-/* Hover effect */
-
 .trafikk button:hover {
     transform: scale(1.03);
 }
 
 
-/* ===== DISAPPEARING ANIMATION ===== */
-
-/* Green goes to the left */
-
-.trafikk.skjul .green {
-    opacity: 0;
-    transform: translateX(-40px);
-}
-
-
-/* Yellow goes to the right */
-
-.trafikk.skjul .yellow {
-    opacity: 0;
-    transform: translateX(40px);
-}
-
-
-/* Red becomes smaller */
-
-.trafikk.skjul .red {
-    opacity: 0;
-    transform: scale(0.9);
-}
-
-
-/* ===== RESULT / SUPPORT SECTION ===== */
-
-#resultat {
-    opacity: 0;
-
-    transition: opacity 0.4s ease;
-}
-
-
-/* JS adds this class */
-
-#resultat.vis {
-    opacity: 1;
-}
-
-
-/* Container for support choices */
+/* Support choices */
 
 .stotte {
-    display: flex;
+    display: none;
     flex-direction: column;
-
-    gap: 12px;
+    gap: 10px;
 
     max-width: 400px;
-
     margin: 30px auto;
-    padding: 25px;
-
-    background-color: rgba(255, 252, 245, 0.8);
-
-    border-radius: 10px;
+    padding: 20px;
 
     text-align: center;
+
+    background-color: rgba(255, 252, 245, 0.8);
+    border-radius: 10px;
 }
-
-
-/* Support title */
 
 .stotte h2 {
     margin: 0 0 10px 0;
-
-    color: #243537;
-
-    font-size: 28px;
+    font-size: 26px;
 }
 
-
-/* Support buttons */
-
-.stotte-knapp {
-    padding: 18px;
-
+.stotte button {
+    padding: 15px;
     font-size: 18px;
     font-family: Georgia, "Times New Roman", serif;
-
-    background-color: #dfe7e5;
-    color: #243537;
 
     border: none;
     border-radius: 5px;
 
-    cursor: pointer;
+    background-color: #dfe7e5;
+    color: #243537;
 
-    transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
-
-/* Support button hover */
-
-.stotte-knapp:hover {
+.stotte button:hover {
     transform: scale(1.03);
 }
 
 
+/* Result */
+
+#resultat {
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+
+/* Message after making a choice */
+
+.melding {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: rgba(255, 252, 245, 0.8);
+    border-radius: 10px;
+}
+
+.melding h2 {
+    margin-top: 0;
+}
+
+.melding p {
+    margin-bottom: 15px;
+}
+
+.melding button {
+    padding: 15px;
+
+    font-size: 18px;
+    font-family: Georgia, "Times New Roman", serif;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #dfe7e5;
+    color: #243537;
+
+    cursor: pointer;
+}
+
+.melding button:hover {
+    transform: scale(1.03);
+}
