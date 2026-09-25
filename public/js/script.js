@@ -121,7 +121,7 @@ radgiverButton.addEventListener("click", () => {
                         alt="Rådgiver"
                     >
 
-                    <h3>Rådgiver</h3>
+                    <h3>Nevin Budak</h3>
 
                 </article>
 
