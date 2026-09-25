@@ -11,6 +11,24 @@ const trafikk = document.querySelector(".trafikk");
 const stotte = document.querySelector(".stotte");
 const resultat = document.querySelector("#resultat");
 
+const visStartSkjerm = () => {
+    trafikk.style.display = "flex";
+    stotte.style.display = "none";
+    resultat.innerHTML = "";
+};
+
+const leggTilAngreKnapp = () => {
+    const knapp = document.createElement("button");
+    knapp.type = "button";
+    knapp.className = "angre-valg";
+    knapp.textContent = "Angre valg";
+
+    knapp.addEventListener("click", () => {
+        visStartSkjerm();
+    });
+
+    resultat.appendChild(knapp);
+};
 
 const sjekkValg = (valg) => {
 
@@ -26,6 +44,7 @@ const sjekkValg = (valg) => {
                 <p>Vi håper du får en fin dag videre </p>
             </div>
         `;
+        leggTilAngreKnapp();
 
     } else if (valg === "yellow") {
 
@@ -46,6 +65,7 @@ const sjekkValg = (valg) => {
                 </ul>
             </div>
         `;
+        leggTilAngreKnapp();
 
     } else if (valg === "red") {
 
@@ -103,6 +123,7 @@ miljoarbeiderButton.addEventListener("click", () => {
 
         </div>
     `;
+    leggTilAngreKnapp();
 });
 
 
@@ -189,7 +210,7 @@ radgiverButton.addEventListener("click", () => {
 
                 </article>
 
-                <article class="radgiver-profil">
+                <article class="radgiver-profil hege-profil">
 
                     <img
                         src="/img/Skjermbilde 2026-09-25 130258.png"
@@ -214,6 +235,7 @@ radgiverButton.addEventListener("click", () => {
 
         </div>
     `;
+    leggTilAngreKnapp();
 });
 
 
@@ -249,6 +271,7 @@ helsesykepleierButton.addEventListener("click", () => {
 
         </div>
     `;
+    leggTilAngreKnapp();
 });
 
 
@@ -287,4 +310,5 @@ ingenKontaktButton.addEventListener("click", () => {
 
         </div>
     `;
+    leggTilAngreKnapp();
 });
