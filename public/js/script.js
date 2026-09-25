@@ -27,7 +27,6 @@ const sjekkValg = (valg) => {
             </div>
         `;
 
-
     } else if (valg === "yellow") {
 
         console.log("Jeg har det litt mye akkurat nå");
@@ -40,7 +39,6 @@ const sjekkValg = (valg) => {
                 <p>Ta det rolig og prøv å ta én ting om gangen.</p>
             </div>
         `;
-
 
     } else if (valg === "red") {
 
@@ -66,47 +64,86 @@ redButton.addEventListener("click", () => {
     sjekkValg("red");
 });
 
+
 miljoarbeiderButton.addEventListener("click", () => {
 
     stotte.style.display = "none";
 
     resultat.innerHTML = `
         <div class="melding">
-            <h2>Miljøarbeidere</h2>
-            <p>Du kan kontakte en miljøarbeider i Teams.</p>
 
-            <img src="/img/miljøarbeider.jpg" alt="Miljøarbeidere">
+            <h2>Miljøarbeidere</h2>
+
+            <p>
+                Du kan kontakte en miljøarbeider i Teams.
+            </p>
+
+            <img
+                src="/img/miljøarbeider.jpg"
+                alt="Miljøarbeidere"
+            >
 
             <h3>Aya Bougrine</h3>
             <h3>Mira Helene Kristiansen</h3>
+
             <p>
-                Åpne Teams og søk etter 
-                <strong>Aya Bougrine og</strong>
+                Åpne Teams og søk etter
+                <strong>Aya Bougrine</strong>
+                eller
                 <strong>Mira Helene Kristiansen</strong>
                 for å starte en chat.
             </p>
+
         </div>
     `;
 });
+
+
 radgiverButton.addEventListener("click", () => {
 
     stotte.style.display = "none";
 
     resultat.innerHTML = `
         <div class="melding">
-            <h2>Rådgiver</h2>
-            <p>Du har valgt å snakke med en  rådgiver.</p>
+
+            <h2>Rådgivere</h2>
+
+            <p>
+                Velg en rådgiver du ønsker å kontakte.
+            </p>
+
             <div class="radgiver-profiler">
+
                 <article class="radgiver-profil">
-                    <img src="/img/radgiver-1.jpeg" alt="Rådgiver">
-                    <h3>Rådgiver</h3>
+
+                    <img
+                        src="/img/radgiver-1.jpeg"
+                        alt="Rådgiver"
+                    >
+
+                    <h3>Nevin Budak</h3>
+
                 </article>
+
+
                 <article class="radgiver-profil">
-                    <img src="/img/radgiver-2.jpeg" alt="Rådgiver">
-                    <h3>Rådgiver</h3>
+
+                    <img
+                        src="/img/radgiver-2.jpeg"
+                        alt="Shahsawar Omarzae"
+                    >
+
+                    <h3>Shahsawar Omarzae</h3>
+
                 </article>
+
             </div>
-           
+
+            <p>
+                Åpne Teams og søk etter rådgiveren
+                du ønsker å kontakte for å starte en chat.
+            </p>
+
         </div>
     `;
 });
@@ -118,14 +155,30 @@ helsesykepleierButton.addEventListener("click", () => {
 
     resultat.innerHTML = `
         <div class="melding">
+
             <h2>Helsesykepleier</h2>
-            <p>Du har valgt å snakke med en helsesykepleier.</p>
-               <img src="/img/christina.jpg" alt="Helsesykepleier">
-                <p>
-                Åpne Teams of søk etter 
-               <strong>Christina Fredrika Elisabeth Krenauer</strong>
-               for å starte en chat
-               </p>
+
+            <p>
+                Du har valgt å snakke med en helsesykepleier.
+            </p>
+
+            <img
+                src="/img/christina.jpg"
+                alt="Helsesykepleier"
+            >
+
+            <h3>
+                Christina Fredrika Elisabeth Krenauer
+            </h3>
+
+            <p>
+                Åpne Teams og søk etter
+                <strong>
+                    Christina Fredrika Elisabeth Krenauer
+                </strong>
+                for å starte en chat.
+            </p>
+
         </div>
     `;
 });
@@ -137,8 +190,13 @@ ingenKontaktButton.addEventListener("click", () => {
 
     resultat.innerHTML = `
         <div class="melding">
+
             <h2>Valget ditt er registrert</h2>
-            <p>Du har valgt å ikke kontakte noen akkurat nå.</p>
+
+            <p>
+                Du har valgt å ikke kontakte noen akkurat nå.
+            </p>
+
         </div>
     `;
 });
