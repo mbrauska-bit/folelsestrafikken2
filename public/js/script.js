@@ -66,22 +66,28 @@ redButton.addEventListener("click", () => {
     sjekkValg("red");
 });
 
-
 miljoarbeiderButton.addEventListener("click", () => {
 
     stotte.style.display = "none";
 
     resultat.innerHTML = `
         <div class="melding">
-            <h2>Miljøarbeider</h2>
-            <p>Du har valgt å snakke med en miljøarbeider.</p>
-            
-            <button>Send forespørsel</button>
+            <h2>Miljøarbeidere</h2>
+            <p>Du kan kontakte en miljøarbeider i Teams.</p>
+
+            <img src="/img/miljøarbeider.jpg" alt="Miljøarbeidere">
+
+            <h3>Aya Bougrine</h3>
+            <h3>Mira Helene Kristiansen</h3>
+            <p>
+                Åpne Teams og søk etter 
+                <strong>Aya Bougrine og</strong>
+                <strong>Mira Helene Kristiansen</strong>
+                for å starte en chat.
+            </p>
         </div>
     `;
 });
-
-
 radgiverButton.addEventListener("click", () => {
 
     stotte.style.display = "none";
@@ -89,7 +95,7 @@ radgiverButton.addEventListener("click", () => {
     resultat.innerHTML = `
         <div class="melding">
             <h2>Rådgiver</h2>
-            <p>Du har valgt å snakke med en rådgiver.</p>
+            <p>Du har valgt å snakke med en  rådgiver.</p>
             <div class="radgiver-profiler">
                 <article class="radgiver-profil">
                     <img src="/img/radgiver-1.jpeg" alt="Rådgiver">
@@ -100,7 +106,7 @@ radgiverButton.addEventListener("click", () => {
                     <h3>Rådgiver</h3>
                 </article>
             </div>
-            <button>Send forespørsel</button>
+           
         </div>
     `;
 });
@@ -114,7 +120,12 @@ helsesykepleierButton.addEventListener("click", () => {
         <div class="melding">
             <h2>Helsesykepleier</h2>
             <p>Du har valgt å snakke med en helsesykepleier.</p>
-            <button>Send forespørsel</button>
+               <img src="/img/christina.jpg" alt="Helsesykepleier">
+                <p>
+                Åpne Teams of søk etter 
+               <strong>Christina Fredrika Elisabeth Krenauer</strong>
+               for å starte en chat
+               </p>
         </div>
     `;
 });

@@ -171,7 +171,14 @@ p {
     margin: 10px;
     font-size: 1rem;
 }
-
+.melding img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+}
 .melding button {
     padding: 15px;
 
