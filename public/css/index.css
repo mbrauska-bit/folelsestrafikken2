@@ -2,204 +2,347 @@
     box-sizing: border-box;
 }
 
+
 html,
 body {
     min-height: 100%;
 }
 
+
 body {
     margin: 0;
-    background: #dfe7e5 url("/img/background.png") center / cover fixed no-repeat;
+
+    background:
+        #dfe7e5
+        url("/img/background.png")
+        center / cover
+        fixed
+        no-repeat;
+
     color: #243537;
+
     font-family: Georgia, "Times New Roman", serif;
 }
 
 
-/* Main */
+
+/* MAIN */
 
 main {
-    min-height: calc(100vh - 72px);
-    display: grid;
-    place-content: center;
-    justify-items: center;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
     gap: 1rem;
+
     padding: 3rem 1.5rem;
+
     text-align: center;
+
     background: rgba(255, 252, 245, 0.42);
 }
 
+
 h1 {
     margin: 0;
+
     font-size: clamp(2.5rem, 8vw, 5.5rem);
 }
 
+
 p {
     margin: 0;
+
     font-size: 1.25rem;
 }
 
 
-/* Traffic buttons */
+
+/* TRAFFIC BUTTONS */
 
 .trafikk {
     display: flex;
     flex-direction: column;
+
     gap: 10px;
+
+    width: 100%;
     max-width: 400px;
-    margin: 30px auto;
+
+    margin-top: 20px;
 }
 
+
 .trafikk button {
+    width: 100%;
+
     padding: 20px;
+
     font-size: 20px;
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     border: none;
+
     border-radius: 5px;
+
     cursor: pointer;
+
+    transition: transform 0.2s;
 }
+
 
 .green {
     background-color: #70A151;
+
     color: white;
 }
+
 
 .yellow {
     background-color: #D7CA56;
+
     color: #243537;
 }
 
+
 .red {
     background-color: #7D0C0C;
+
     color: white;
 }
+
 
 .trafikk button:hover {
     transform: scale(1.03);
 }
 
 
-/* Support choices */
+
+/* SUPPORT CHOICES */
 
 .stotte {
     display: none;
+
     flex-direction: column;
+
     gap: 10px;
 
+    width: calc(100% - 30px);
     max-width: 400px;
+
     margin: 30px auto;
+
     padding: 20px;
 
     text-align: center;
 
-    background-color: rgba(255, 252, 245, 0.8);
+    background-color:
+        rgba(255, 252, 245, 0.8);
+
     border-radius: 10px;
 }
 
+
 .stotte h2 {
     margin: 0 0 10px 0;
+
     font-size: 26px;
 }
 
+
 .stotte button {
     padding: 15px;
+
     font-size: 18px;
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     border: none;
+
     border-radius: 5px;
 
     background-color: #dfe7e5;
+
     color: #243537;
 
     cursor: pointer;
+
+    transition: transform 0.2s;
 }
+
 
 .stotte button:hover {
     transform: scale(1.03);
 }
 
 
-/* Result */
+
+/* RESULT */
 
 #resultat {
+    width: calc(100% - 30px);
+
     max-width: 400px;
+
     margin: 30px auto;
 }
 
 
-/* Message after making a choice */
+
+/* MESSAGE */
 
 .melding {
     padding: 20px;
 
     text-align: center;
 
-    background-color: rgba(255, 252, 245, 0.8);
+    background-color:
+        rgba(255, 252, 245, 0.8);
+
     border-radius: 10px;
 }
+
 
 .melding h2 {
     margin-top: 0;
 }
 
+
+.melding h3 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+
 .melding p {
     margin-bottom: 15px;
 }
 
+
+
+/* MILJØARBEIDER / HELSESYKEPLEIER IMAGE */
+
+.melding > img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 350px;
+
+    height: auto;
+
+    margin: 20px auto;
+
+    border-radius: 8px;
+}
+
+
+
+/* RÅDGIVER PROFILES */
+
 .radgiver-profiler {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
     gap: 12px;
+
     margin: 20px 0;
 }
 
+
 .radgiver-profil {
     overflow: hidden;
+
     margin: 0;
+
     border-radius: 8px;
-    background: #dfe7e5;
+
+    background-color: #dfe7e5;
 }
+
 
 .radgiver-profil img {
     display: block;
+
     width: 100%;
+
     aspect-ratio: 1 / 1;
+
     object-fit: cover;
 }
 
+
 .radgiver-profil h3 {
     margin: 10px;
+
     font-size: 1rem;
 }
-.melding img {
-    display: block;
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 8px;
-}
+
+
+
+/* MESSAGE BUTTONS */
+
 .melding button {
     padding: 15px;
 
     font-size: 18px;
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     border: none;
+
     border-radius: 5px;
 
     background-color: #dfe7e5;
+
     color: #243537;
 
     cursor: pointer;
+
+    transition: transform 0.2s;
 }
+
 
 .melding button:hover {
     transform: scale(1.03);
 }
 
+
+
+/* MOBILE */
+
 @media (max-width: 480px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+
+    .trafikk button {
+        font-size: 18px;
+
+        padding: 17px;
+    }
+
+
     .radgiver-profiler {
         grid-template-columns: 1fr;
     }
+
 }
