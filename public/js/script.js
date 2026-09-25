@@ -23,7 +23,7 @@ const sjekkValg = (valg) => {
         resultat.innerHTML = `
             <div class="melding">
                 <h2>Godt å høre!</h2>
-                <p>Vi håper du får en fin dag videre 😊</p>
+                <p>Vi håper du får en fin dag videre </p>
             </div>
         `;
 
@@ -36,7 +36,14 @@ const sjekkValg = (valg) => {
         resultat.innerHTML = `
             <div class="melding">
                 <h2>Det er helt greit å ha mye å tenke på.</h2>
-                <p>Ta det rolig og prøv å ta én ting om gangen.</p>
+                <p>Her er noen enkle ting du kan prøve:</p>
+                <ul class="tips-liste">
+                    <li>Ta én liten oppgave av gangen.</li>
+                    <li>Gå en kort pause og ta noen dype pust.</li>
+                    <li>Be noen om hjelp tidlig, før det blir for mye.</li>
+                    <li>Skriv ned det som må gjøres, så det blir mindre kaotisk.</li>
+                    <li>Snakk med en lærer, rådgiver eller miljøarbeider hvis du trenger støtte.</li>
+                </ul>
             </div>
         `;
 
@@ -117,11 +124,16 @@ radgiverButton.addEventListener("click", () => {
                 <article class="radgiver-profil">
 
                     <img
-                        src="/img/radgiver-1.jpeg"
+                        src="./img/radgiver-1.jpeg"
                         alt="Rådgiver"
                     >
 
-                    <h3>Nevin Budak</h3>
+                    <div class="radgiver-info">
+                        <h3>Nevin Budak</h3>
+                        <p><strong>Avdeling</strong><br>Elevtjenester</p>
+                        <p><strong>Telefon</strong><br>98 88 74 65</p>
+                        <p><strong>E-post</strong><br><a href="mailto:nevinbudak@afk.no">nevinbudak@afk.no</a></p>
+                    </div>
 
                 </article>
 
@@ -133,7 +145,63 @@ radgiverButton.addEventListener("click", () => {
                         alt="Shahsawar Omarzae"
                     >
 
-                    <h3>Shahsawar Omarzae</h3>
+                    <div class="radgiver-info">
+                        <h3>Shahsawar Omarzae</h3>
+                        <p><strong>Avdeling</strong><br>Elevtjenester</p>
+                        <p><strong>Telefon</strong><br>98 88 74 65</p>
+                        <p><strong>E-post</strong><br><a href="mailto:shahsawaro@afk.no">shahsawaro@afk.no</a></p>
+                    </div>
+
+                </article>
+
+                <article class="radgiver-profil">
+
+                    <img
+                        src="/img/NinaIrenHølås.jpeg"
+                        alt="Nina Iren Hølås"
+                    >
+
+                    <div class="radgiver-info">
+                        <h3>Nina Iren Hølås</h3>
+                        <p><strong>Ansvar</strong><br>Medier og kommunikasjon vg1, vg2, vg3, Informasjonsteknologi og medieproduksjon vg1 og vg2 og påbygning til generell studiekompetanse VG3 og VG4</p>
+                        <p><strong>Telefon</strong><br>976 51 683</p>
+                        <p><strong>E-post</strong><br><a href="mailto:ninahol@afk.no">ninahol@afk.no</a></p>
+                    </div>
+
+                </article>
+
+                <article class="radgiver-profil anniken-profil">
+
+                    <img
+                        src="./img/annikenwiborg.png"
+                        alt="Anniken Wiborg"
+                    >
+
+                    <div class="radgiver-info">
+                        <h3>Anniken Wiborg</h3>
+                        <p class="info-label"><strong>Ansvar</strong></p>
+                        <p>Idrettsfag vg1, vg2, vg3 og ansvar Helse og oppvekst vg1 og vg2</p>
+                        <p class="info-label"><strong>Telefon</strong></p>
+                        <p>982 15 508</p>
+                        <p class="info-label"><strong>E-post</strong></p>
+                        <p><a href="mailto:annikenwib@afk.no">annikenwib@afk.no</a></p>
+                    </div>
+
+                </article>
+
+                <article class="radgiver-profil">
+
+                    <img
+                        src="/img/Skjermbilde 2026-09-25 130258.png"
+                        alt="Hege Trulsvik"
+                    >
+
+                    <div class="radgiver-info">
+                        <h3>Hege Trulsvik</h3>
+                        <p><strong>Ansvar</strong><br>Salg, service og reiseliv vg1 og vg2, og Elektro og datateknologi vg1, vg2 og vg3</p>
+                        <p><strong>Telefon</strong><br>411 45 820</p>
+                        <p><strong>E-post</strong><br><a href="mailto:hegetru@afk.no">hegetru@afk.no</a></p>
+                    </div>
 
                 </article>
 
@@ -195,6 +263,26 @@ ingenKontaktButton.addEventListener("click", () => {
 
             <p>
                 Du har valgt å ikke kontakte noen akkurat nå.
+            </p>
+
+            <p>
+                <a href="https://mentalhelse.no/fa-hjelp/hjelpetelefonen/" target="_blank" rel="noopener noreferrer">
+                    Hjelpetelefonen - Mental Helse
+                </a>
+            </p>
+
+            <h3>Hjelpetelefonen</h3>
+
+            <p>
+                <strong>116 123</strong> er en gratis og døgnåpen telefontjeneste for alle som trenger noen å snakke med.
+                Du kan være anonym og vi har taushetsplikt. Telefonen er åpen alle dager, året rundt, også på røde dager.
+                Vi er her når alt annet er stengt.
+            </p>
+
+            <p>
+                <strong>Telefonnummer:</strong> 116 123<br>
+                Fra utlandet: +47 911 16 123<br>
+                (vanlig mobiltakst gjelder)
             </p>
 
         </div>
