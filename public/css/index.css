@@ -29,7 +29,7 @@ body {
 /* MAIN */
 
 main {
-    min-height: 100vh;
+   
 
     display: flex;
     flex-direction: column;
@@ -45,7 +45,6 @@ main {
 
     background: rgba(255, 252, 245, 0.42);
 }
-
 
 h1 {
     margin: 0;
