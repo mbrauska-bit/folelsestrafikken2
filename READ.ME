@@ -1,0 +1,87 @@
+# Følelsestrafikken
+
+## Hva gjør løsningen?
+
+Følelsestrafikken er en nettside som hjelper elever med å vise hvordan de har det på skolen.
+
+Brukeren kan velge mellom:
+
+- 🟢 Jeg har det greit
+- 🟡 Det er litt mye akkurat nå
+- 🔴 Jeg trenger støtte
+
+Ved behov for støtte kan eleven finne kontaktinformasjon til blant annet miljøarbeidere, rådgivere og helsesykepleier.
+
+## Prosjektstruktur
+
+```text
+folelsestrafikken2/
+├── app.js
+├── package.json
+├── public/
+│   ├── css/
+│   ├── js/
+│   └── img/
+└── views/
+    ├── index.ejs
+    └── partials/
+```
+
+- `app.js` – starter serveren.
+- `public/` – inneholder CSS, JavaScript og bilder.
+- `views/` – inneholder EJS-sidene.
+- `package.json` – inneholder pakkene prosjektet bruker.
+
+## Teknologier
+
+Prosjektet bruker:
+
+- Node.js og Express
+- EJS
+- HTML/CSS
+- JavaScript
+- Git og GitHub
+
+## Installasjon og oppstart
+
+Klon prosjektet:
+
+```bash
+git clone https://github.com/mbrauska-bit/folelsestrafikken2.git
+cd folelsestrafikken2
+```
+
+Installer pakkene:
+
+```bash
+npm install
+```
+
+Start serveren:
+
+```bash
+node app.js
+```
+
+Åpne deretter:
+
+text
+http://localhost:4000
+
+
+ Tjenester og konfigurasjon
+
+Node.js og npm må være installert for å kjøre prosjektet.
+
+Prosjektet bruker **port 4000**. Serveroppsettet ligger i `app.js`, mens pakkene og avhengighetene ligger i `package.json`.
+
+ Feilsøking
+
+**Nettsiden starter ikke:**  
+Sjekk terminalen for feilmeldinger og prøv `npm install` før du starter `node app.js` på nytt.
+
+**CSS, JavaScript eller bilder vises ikke:**  
+Sjekk at filene ligger i riktig mappe under `public/` og at filnavnene i koden er riktige.
+
+**Port 4000 er opptatt:**  
+Stopp en annen Node-server med `Ctrl + C` og prøv å starte prosjektet igjen.
