@@ -184,6 +184,7 @@ helsesykepleierButton.addEventListener("click", () => {
 
             <p>
                 Du har valgt å snakke med en helsesykepleier.
+                Helsesykepleier kan hjelpe deg med blant annet stress, søvn, skole, venner og andre ting som påvirker hvordan du har det. Du kan komme for å snakke, stille spørsmål eller få råd og støtte.
             </p>
 
             <img
