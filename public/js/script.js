@@ -136,102 +136,36 @@ radgiverButton.addEventListener("click", () => {
 
             <h2>Rådgivere</h2>
 
-            <p>
-                Velg en rådgiver du ønsker å kontakte.
-            </p>
+            <p>Velg en rådgiver du ønsker å kontakte.</p>
 
             <div class="radgiver-profiler">
 
-                <article class="radgiver-profil">
+                <button class="radgiver-profil" onclick="visRadgiver('nevin')">
+                    <img src="/img/radgiver-1.jpeg" alt="Nevin Budak">
+                    <span>Nevin Budak</span>
+                </button>
 
-                    <img
-                        src="./img/radgiver-1.jpeg"
-                        alt="Rådgiver"
-                    >
+                <button class="radgiver-profil" onclick="visRadgiver('shahsawar')">
+                    <img src="/img/radgiver-2.jpeg" alt="Shahsawar Omarzae">
+                    <span>Shahsawar Omarzae</span>
+                </button>
 
-                    <div class="radgiver-info">
-                        <h3>Nevin Budak</h3>
-                        <p><strong>Avdeling</strong><br>Elevtjenester</p>
-                        <p><strong>Telefon</strong><br>98 88 74 65</p>
-                        <p><strong>E-post</strong><br><a href="mailto:nevinbudak@afk.no">nevinbudak@afk.no</a></p>
-                    </div>
+                <button class="radgiver-profil" onclick="visRadgiver('nina')">
+                    <img src="/img/NinaIrenHølås.jpeg" alt="Nina Iren Hølås">
+                    <span>Nina Iren Hølås</span>
+                </button>
 
-                </article>
+                <button class="radgiver-profil" onclick="visRadgiver('anniken')">
+                    <img src="/img/annikenwiborg.png" alt="Anniken Wiborg">
+                    <span>Anniken Wiborg</span>
+                </button>
 
-
-                <article class="radgiver-profil">
-
-                    <img
-                        src="/img/radgiver-2.jpeg"
-                        alt="Shahsawar Omarzae"
-                    >
-
-                    <div class="radgiver-info">
-                        <h3>Shahsawar Omarzae</h3>
-                        <p><strong>Avdeling</strong><br>Elevtjenester</p>
-                        <p><strong>Telefon</strong><br>98 88 74 65</p>
-                        <p><strong>E-post</strong><br><a href="mailto:shahsawaro@afk.no">shahsawaro@afk.no</a></p>
-                    </div>
-
-                </article>
-
-                <article class="radgiver-profil">
-
-                    <img
-                        src="/img/NinaIrenHølås.jpeg"
-                        alt="Nina Iren Hølås"
-                    >
-
-                    <div class="radgiver-info">
-                        <h3>Nina Iren Hølås</h3>
-                        <p><strong>Ansvar</strong><br>Medier og kommunikasjon vg1, vg2, vg3, Informasjonsteknologi og medieproduksjon vg1 og vg2 og påbygning til generell studiekompetanse VG3 og VG4</p>
-                        <p><strong>Telefon</strong><br>976 51 683</p>
-                        <p><strong>E-post</strong><br><a href="mailto:ninahol@afk.no">ninahol@afk.no</a></p>
-                    </div>
-
-                </article>
-
-                <article class="radgiver-profil anniken-profil">
-
-                    <img
-                        src="./img/annikenwiborg.png"
-                        alt="Anniken Wiborg"
-                    >
-
-                    <div class="radgiver-info">
-                        <h3>Anniken Wiborg</h3>
-                        <p class="info-label"><strong>Ansvar</strong></p>
-                        <p>Idrettsfag vg1, vg2, vg3 og ansvar Helse og oppvekst vg1 og vg2</p>
-                        <p class="info-label"><strong>Telefon</strong></p>
-                        <p>982 15 508</p>
-                        <p class="info-label"><strong>E-post</strong></p>
-                        <p><a href="mailto:annikenwib@afk.no">annikenwib@afk.no</a></p>
-                    </div>
-
-                </article>
-
-                <article class="radgiver-profil hege-profil">
-
-                    <img
-                        src="/img/Skjermbilde 2026-09-25 130258.png"
-                        alt="Hege Trulsvik"
-                    >
-
-                    <div class="radgiver-info">
-                        <h3>Hege Trulsvik</h3>
-                        <p><strong>Ansvar</strong><br>Salg, service og reiseliv vg1 og vg2, og Elektro og datateknologi vg1, vg2 og vg3</p>
-                        <p><strong>Telefon</strong><br>411 45 820</p>
-                        <p><strong>E-post</strong><br><a href="mailto:hegetru@afk.no">hegetru@afk.no</a></p>
-                    </div>
-
-                </article>
+                <button class="radgiver-profil" onclick="visRadgiver('hege')">
+                    <img src="/img/Skjermbilde 2026-09-25 130258.png" alt="Hege Trulsvik">
+                    <span>Hege Trulsvik</span>
+                </button>
 
             </div>
-
-            <p>
-                Åpne Teams og søk etter rådgiveren
-                du ønsker å kontakte for å starte en chat.
-            </p>
 
         </div>
     `;
@@ -312,3 +246,74 @@ ingenKontaktButton.addEventListener("click", () => {
     `;
     leggTilAngreKnapp();
 });
+function visRadgiver(navn) {
+
+    let informasjon = "";
+
+    if (navn === "nevin") {
+
+        informasjon = `
+            <h2>Nevin Budak</h2>
+            <p><strong>Avdeling:</strong> Elevtjenester</p>
+              <p><strong>Telefon</strong><br>98 88 74 65</p>
+             <p><strong>E-post</strong><br><a href="mailto:nevinbudak@afk.no">nevinbudak@afk.no</a></p>
+            <p>Åpne Teams og søk etter <strong>Nevin Budak</strong>.</p>
+        `;
+
+    } else if (navn === "shahsawar") {
+
+        informasjon = `
+            <h2>Shahsawar Omarzae</h2>
+            <p><strong>Avdeling:</strong> Elevtjenester</p>
+             <p><strong>Avdeling</strong><br>Elevtjenester</p>
+                        <p><strong>Telefon</strong><br>98 88 74 65</p>
+            <p>Åpne Teams og søk etter <strong>Shahsawar Omarzae</strong>.</p>
+        `;
+
+    } else if (navn === "nina") {
+
+        informasjon = `
+            <h2>Nina Iren Hølås</h2>
+            <p>
+                Rådgiver for blant annet Informasjonsteknologi
+                og medieproduksjon.
+            </p>
+            
+            <p><strong>Telefon</strong><br>976 51 683</p>
+                        <p><strong>E-post</strong><br><a href="mailto:ninahol@afk.no">ninahol@afk.no</a></p>
+            <p>Åpne Teams og søk etter <strong>Nina Iren Hølås</strong>.</p>
+        `;
+
+    } else if (navn === "anniken") {
+
+        informasjon = `
+            <h2>Anniken Wiborg</h2>
+            <p>Rådgiver for blant annet idrettsfag.</p>
+              <p>982 15 508</p>
+                <p class="info-label"><strong>E-post</strong></p
+            <p>Åpne Teams og søk etter <strong>Anniken Wiborg</strong>.</p>
+        `;
+
+    } else if (navn === "hege") {
+
+        informasjon = `
+            <h2>Hege Trulsvik</h2>
+            <p>
+                Rådgiver for blant annet elektro og datateknologi.
+            </p>
+             <p><strong>Telefon</strong><br>411 45 820</p>
+                        <p><strong>E-post</strong><br><a href="mailto:hegetru@afk.no">hegetru@afk.no</a></p>
+            <p>Åpne Teams og søk etter <strong>Hege Trulsvik</strong>.</p>
+        `;
+    }
+
+    resultat.innerHTML = `
+        <div class="melding radgiver-detaljer">
+            ${informasjon}
+
+            <button class="tilbake-radgivere" onclick="radgiverButton.click()">
+                ← Tilbake til rådgivere
+            </button>
+        </div>
+    `;
+}
