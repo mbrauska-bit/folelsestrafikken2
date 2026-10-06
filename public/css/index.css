@@ -262,38 +262,43 @@ p {
 /* RÅDGIVER PROFILES */
 
 .radgiver-profiler {
-    display: grid;
+   display: grid;
 
     grid-template-columns: repeat(5, 1fr);
 
-    gap: 10px;
+    gap: 12px;
 
     width: 100%;
+    max-width: 1000px;
 
-    margin: 15px 0;
+    margin: 15px auto 0;
 }
 
 
 .radgiver-profil {
-    display: flex;
+     display: flex;
     flex-direction: column;
 
-    width: 100%;
-    min-width: 0;
+    padding: 0;
 
     overflow: hidden;
 
+    border: none;
+    border-radius: 10px;
+
     background-color: #dfe7e5;
 
-    border-radius: 8px;
+    cursor: pointer;
+
+    transition: transform 0.2s;
 }
 
 
 .radgiver-profil img {
-    display: block;
+     display: block;
 
     width: 100%;
-    height: 130px;
+    height: 150px;
 
     object-fit: cover;
 }
@@ -327,22 +332,50 @@ p {
     overflow-wrap: anywhere;
 }
 
+.radgiver-profil:hover {
+    transform: scale(1.03);
+}
 
 /* Fjern gamle spesialplasseringer */
 
-.hege-profil {
-    grid-column: auto;
 
-    width: 100%;
+
+.radgiver-profil span {
+    padding: 10px 5px;
+
+    color: #243537;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 
-.anniken-profil {
-    width: 100%;
-    max-width: none;
+.radgiver-detaljer {
+    max-width: 500px;
 
-    margin: 0;
+    margin: 20px auto;
 }
+
+
+.tilbake-radgivere {
+    margin-top: 15px;
+
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #dfe7e5;
+
+    color: #243537;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
 
 
 
